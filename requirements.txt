@@ -1,0 +1,5 @@
+Django~=2.2.0
+gunicorn~=19.9.0
+Whitenoise~=5.0.0
+django-csp~=3.5.0
+
