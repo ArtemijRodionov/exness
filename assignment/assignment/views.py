@@ -1,6 +1,12 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
+
+from assignment.forms import CalculationForm
+from assignment.logic import calculate
 
 
-class Calculator(TemplateView):
+def calculator(request):
+    ctx = {}
 
-    template_name = 'index.html'
+    form = CalculationForm()
+    ctx['form'] = form
+    return render(request, 'index.html', ctx)
