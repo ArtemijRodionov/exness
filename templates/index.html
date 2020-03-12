@@ -14,6 +14,12 @@
       {{ form }}
       <input type="submit" value="Calculate">
     </form>
+    {% if total %}
+      <table>
+        <tr><td>Total with discount</td> <td>{{ total.discounted|floatformat:2 }}</td></tr>
+        <tr><td>Total with TAX</td><td>{{ total.tax|floatformat:2 }}</td></tr>
+      </table>
+    {% endif %}
     <footer>
       Created by <a href="https://github.com/artemiy312">Artemiy Rodionov</a>, source code: <a href="https://github.com/artemiy312/exness">https://github.com/artemiy312/exness</a>.
     </footer>
